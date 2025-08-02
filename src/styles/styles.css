@@ -1,0 +1,269 @@
+/* Importar una fuente elegante de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  /* Paleta de colores */
+  --primary-color: #4A90E2; /* Azul vibrante */
+  --secondary-color: #50E3C2; /* Verde turquesa */
+  --text-color-primary: #333333; /* Gris oscuro para texto principal */
+  --text-color-secondary: #666666; /* Gris más claro para texto secundario */
+  --background-color: #F4F7F6; /* Gris muy claro para el fondo */
+  --card-background: #FFFFFF; /* Blanco para tarjetas y contenedores */
+  --border-color: #E0E0E0; /* Gris claro para bordes */
+  --shadow-color: rgba(0, 0, 0, 0.08); /* Sombra suave */
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
+  --navbar-bg: #2d3748; /* Gris oscuro para la barra de navegación */
+  --navbar-text: #ffffff; /* Blanco para el texto de la barra de navegación */
+  --logout-btn-bg: #dc2626; /* Rojo para el botón de cerrar sesión */
+  --logout-btn-hover: #b91c1c; /* Rojo más oscuro al pasar el ratón */
+}
+
+/* Estilos base */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color-primary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Navegación */
+.navbar {
+  background-color: var(--navbar-bg);
+  color: var(--navbar-text);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--navbar-text);
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.navbar-links a {
+  color: var(--navbar-text);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--primary-color);
+}
+
+.logout-btn {
+  background-color: var(--logout-btn-bg);
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px; /* Para un botón redondeado */
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: var(--logout-btn-hover);
+}
+
+/* Botones */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: #3A7FC2;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--text-color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: #42C2A7;
+}
+
+/* Tarjetas y formularios */
+.card {
+  background-color: var(--card-background);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px var(--shadow-color);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-color-secondary);
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+/* Mensajes de alerta */
+.alert {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  color: var(--success-color);
+}
+
+.alert-error {
+  background-color: #f2dede;
+  color: var(--error-color);
+}
+
+/* Títulos */
+h1, h2, h3 {
+  font-weight: 700;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+/* Grillas responsivas */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Imágenes */
+.content-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Contenedor de detalles */
+.detail-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.detail-image {
+  flex-shrink: 0;
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.detail-info {
+  flex-grow: 1;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .navbar-links {
+    margin-top: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  
+  .detail-container {
+    flex-direction: column;
+  }
+  
+  .detail-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Utilidades Tailwind-like para mayor claridad */
+.full-screen-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.text-center { text-align: center; }
+.mt-4 { margin-top: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.p-8 { padding: 2rem; }
+.rounded-lg { border-radius: 0.5rem; }
+.shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

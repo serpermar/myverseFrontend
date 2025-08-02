@@ -10,15 +10,15 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-gray-800 text-white p-4 shadow-md">
-      <div className="container mx-auto flex justify-between items-center">
-        <Link to="/home" className="text-xl font-bold">MyVerse</Link>
-        <div className="flex space-x-4 items-center">
-          <Link to="/home" className="hover:text-gray-400 transition-colors">Inicio</Link>
-          <Link to="/mis-contenidos" className="hover:text-gray-400 transition-colors">Mi Lista</Link>
-          <Link to="/contenidos" className="hover:text-gray-400 transition-colors">Explorar</Link>
-          <Link to="/crear-contenido" className="hover:text-gray-400 transition-colors">Crear Contenido</Link>
-          <button onClick={handleLogout} className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition-colors">
+    <nav className="navbar">
+      <div className="container navbar-container">
+        <Link to="/home" className="navbar-brand">MyVerse</Link>
+        <div className="navbar-links">
+          <Link to="/home">Inicio</Link>
+          <Link to="/mis-contenidos">Mi Lista</Link>
+          <Link to="/contenidos">Explorar</Link>
+          <Link to="/crear-contenido">Crear Contenido</Link>
+          <button onClick={handleLogout} className="logout-btn">
             Cerrar Sesión
           </button>
         </div>
